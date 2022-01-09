@@ -1,0 +1,7 @@
+{
+  "execMap": {
+    "js": "node --inspect=0.0.0.0:9229 -r sucrase/register"
+  },
+  "ignore": ["*.log.json" ]
+  
+}
