@@ -1,7 +1,11 @@
+
 doctype html
-html
+html(lang="en")
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    title= pageTitle
+    link(rel="shortcut icon" href="/img/favicon.png")
+    link(rel='stylesheet' href='/stylesheets/style.css')
+    link(rel='stylesheet' href='/stylesheets/loader.css')
   body
-    block content
+  include loader
+  block content

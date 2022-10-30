@@ -1,0 +1,21 @@
+extends layout
+block content
+  h1 Usuários do Filmow compatíveis com você
+  ul
+    each user in usersList
+      li
+        div 
+          p usuário: 
+            a(class='button' href=user.userLink target="_blank" rel="noopener noreferrer") #{user.user}
+          p compatibilidade: #{user.percent}% - #{user.statusPercent}
+          p baseado em : #{user.basedIn}
+
+  if usersList.length
+    script.
+      const userList = !{JSON.stringify(usersList)}
+      localStorage.setItem('usuários',JSON.stringify(userList))
+      const loader = document.querySelector(".loader"); 
+      loader.className +=" hidden";
+
+
+
