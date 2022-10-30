@@ -1,8 +1,8 @@
-var express = require('express');
-const { getAll } = require('./users/get_all');
-var router = express.Router();
+var express = require('express')
+const { getAll } = require('./users/get_all')
+var router = express.Router()
 
 /* GET users listing. */
-router.get('/compatibilidade', getAll);
+router.get('/compatibility', getAll)
 
-module.exports = router;
+module.exports = router
